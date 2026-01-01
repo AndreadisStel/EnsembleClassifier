@@ -1,0 +1,14 @@
+# --- Core ML ---
+numpy
+pandas
+scikit-learn
+xgboost
+joblib
+
+# --- API ---
+fastapi
+uvicorn
+pydantic
+
+# --- Config ---
+pyyaml

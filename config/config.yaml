@@ -1,0 +1,35 @@
+# DATA
+data:
+  train_path: "data/datasetTV.csv"
+  test_path: "data/datasetTest.csv"
+  validation_size: 0.2
+
+
+# ENSEMBLE LOGIC
+ensemble:
+  w_svm: 0.8
+  tau: 0.45
+
+
+# SVM (MASTER MODEL)
+svm:
+  c: 2.0
+  kernel: "rbf"
+  gamma: "auto"
+  pca_components: 27
+
+
+# XGBOOST (ASSISTANT MODEL)
+xgb:
+  n_estimators: 800
+  max_depth: 4
+  learning_rate: 0.1
+  subsample: 0.8
+  colsample_bytree: 0.8
+
+
+# TRAINING / LOGGING
+training:
+  random_seed: 42
+  experiment_name: "confidence_gated_ensemble"
+  run_name: "final_locked_model"

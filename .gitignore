@@ -1,0 +1,15 @@
+# Ignore Python cache files
+__pycache__/
+
+# Ignore environment files
+.venv/
+
+# Ignore MLflow artifacts and database
+mlruns/
+mlflow.db
+
+# Ignore artifacts
+artifacts/
+
+# Ignore PyCharm files
+.idea/
