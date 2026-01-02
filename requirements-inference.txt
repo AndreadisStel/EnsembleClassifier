@@ -1,14 +1,14 @@
-# --- Core ML ---
-numpy
-pandas
-scikit-learn
-xgboost
-joblib
+# ML core
+numpy>=1.24
+pandas>=2.0
+scikit-learn>=1.3
+xgboost>=2.0
+joblib>=1.3
 
-# --- API ---
-fastapi
-uvicorn
-pydantic
+# API
+fastapi>=0.100
+uvicorn>=0.23
+pydantic>=2.0
 
-# --- Config ---
-pyyaml
+# Config
+PyYAML>=6.0
