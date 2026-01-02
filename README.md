@@ -72,6 +72,8 @@ responsible for producing predictions for all samples. An XGBoost model is
 introduced as an assistant, designed to intervene only when the SVM exhibits
 low confidence in its decision.
 
+![Architecture Flowchart](./assets/flowchart.jpg)
+
 ### SVM as Master
 The SVM was selected as the master model due to its strong and stable
 performance across the full dataset, particularly in the easy classification
