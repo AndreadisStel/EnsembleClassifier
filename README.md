@@ -197,7 +197,7 @@ Each training run logs:
 - assistant behavior metrics
 - stress test statistics (mean and standard deviation)
 
-![MLflow final run](mlflow-final-run.jpg)
+![MLflow final run](./assets/mlflow-final-run.jpg)
 
 In addition to scalar metrics, the following artifacts are logged:
 - [confusion matrices](./artifacts/confusion_matrix.png)
