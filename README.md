@@ -44,7 +44,7 @@ decomposed into:
   and model uncertainty is significantly higher
 
 *This distinction motivated the use of a confidence-aware ensemble strategy,
-rather than a monolithic model optimized solely for global accuracy.*
+rather than a single model optimized for global accuracy.*
 
 
 ## Model Architecture
