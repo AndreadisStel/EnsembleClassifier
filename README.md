@@ -25,7 +25,7 @@ reproducible evaluation, rather than purely optimizing peak accuracy.*
 - [Training Pipeline](#training-pipeline)
 - [Evaluation Strategy](#evaluation-strategy)
 - [Stress Testing](#stress-testing)
-- [Experiment Tracking](#experiment-tracking)
+- [Experiment Tracking (MLflow)](#experiment-tracking)
 - [Inference & API Design](#inference--api-design)
 - [Dockerized Deployment](#dockerized-deployment)
 - [How to Run](#how-to-run)
@@ -187,7 +187,7 @@ indicating stable model behavior under data perturbations.*
 
 ## Experiment Tracking
 
-All experiments are tracked using MLflow to ensure reproducibility and
+All experiments are tracked using **MLflow** to ensure reproducibility and
 systematic comparison between runs.
 
 Each training run logs:
@@ -205,6 +205,8 @@ In addition to scalar metrics, the following artifacts are logged:
 The training pipeline is fully configuration-driven and deterministic, allowing
 experiments to be reproduced by re-running the training script with the same
 configuration file.
+
+![MLflow final run](mlflow_final_run.png)
 
 **MLflow integration enables structured experimentation and prevents ad-hoc
 model selection, making the development process production-
