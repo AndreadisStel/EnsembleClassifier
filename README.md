@@ -206,7 +206,7 @@ The training pipeline is fully configuration-driven and deterministic, allowing
 experiments to be reproduced by re-running the training script with the same
 configuration file.
 
-![MLflow final run](mlflow_final_run.png)
+![MLflow final run](mlflow_final_run.jpg)
 
 **MLflow integration enables structured experimentation and prevents ad-hoc
 model selection, making the development process production-
