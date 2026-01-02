@@ -26,7 +26,7 @@ reproducible evaluation, rather than purely optimizing peak accuracy.*
 - [Evaluation Strategy](#evaluation-strategy)
 - [Stress Testing](#stress-testing)
 - [Experiment Tracking](#experiment-tracking)
-- [Inference & API Design](#inference&apidesign)
+- [Inference & API Design](#inference--api-design)
 - [Dockerized Deployment](#dockerized-deployment)
 - [How to Run](#how-to-run)
 - [License](#license)
