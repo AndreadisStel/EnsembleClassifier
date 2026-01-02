@@ -202,7 +202,6 @@ Each training run logs:
 In addition to scalar metrics, the following [artifacts](./artifacts) are logged:
 - confusion matrices
 - stress test summaries
-- evaluation diagnostics
 
 The training pipeline is fully configuration-driven and deterministic, allowing
 experiments to be reproduced by re-running the training script with the same
