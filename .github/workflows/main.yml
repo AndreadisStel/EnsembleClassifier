@@ -1,0 +1,84 @@
+name: CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  sanity-check:
+    name: Python Sanity Check
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install inference dependencies
+        run: |
+          pip install --upgrade pip
+          pip install -r requirements-inference.txt
+
+      - name: Import core modules
+        run: |
+          python - <<EOF
+          import src.model
+          import inference.api
+          print("Imports OK")
+          EOF
+
+  inference-smoke-test:
+    name: Inference Smoke Test
+    runs-on: ubuntu-latest
+    needs: sanity-check
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install inference dependencies
+        run: |
+          pip install --upgrade pip
+          pip install -r requirements-inference.txt
+
+      - name: Run inference test
+        run: |
+          python - <<EOF
+          import numpy as np
+          from src.model import EnsembleModel
+
+          x = np.random.rand(1, 224)
+          model = EnsembleModel.load("models/ensemble_model.pkl")
+
+          pred, margin, used = model.evaluate_token(x)
+
+          assert pred is not None
+          assert isinstance(margin, float)
+          assert isinstance(used, bool)
+
+          print("Inference OK")
+          EOF
+
+  docker-build:
+    name: Docker Build
+    runs-on: ubuntu-latest
+    needs: inference-smoke-test
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Build Docker image
+        run: |
+          docker build -t ensemble-model-ci .
