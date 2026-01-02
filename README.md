@@ -197,7 +197,9 @@ Each training run logs:
 - assistant behavior metrics
 - stress test statistics (mean and standard deviation)
 
-In addition to scalar metrics, the following artifacts are logged:
+![MLflow final run](mlflow-final-run.jpg)
+
+In addition to scalar metrics, the following [artifacts](./artifacts) are logged:
 - confusion matrices
 - stress test summaries
 - evaluation diagnostics
@@ -205,8 +207,6 @@ In addition to scalar metrics, the following artifacts are logged:
 The training pipeline is fully configuration-driven and deterministic, allowing
 experiments to be reproduced by re-running the training script with the same
 configuration file.
-
-![MLflow final run](mlflow-final-run.jpg)
 
 **MLflow integration enables structured experimentation and prevents ad-hoc
 model selection, making the development process production-
