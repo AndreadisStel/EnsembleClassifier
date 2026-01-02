@@ -3,9 +3,9 @@
 This repository presents a production-oriented machine learning system
 built around a confidence-gated ensemble architecture.
 
-*Originally designed as a Machine Learning course project, the solution
+Originally designed as a Machine Learning course project, the solution
 was evolved into a production-ready application by integrating **MLflow** for
-experiment tracking, **FastAPI** for model serving, and **Docker** for containerization.*
+experiment tracking, **FastAPI** for model serving, and **Docker** for containerization.
 
 A Support Vector Machine (**SVM**) acts as the primary (**"master"**) classifier,
 while an **XGBoost** model is selectively activated as an **assistant** only in
@@ -24,7 +24,7 @@ The task is a multi-class classification problem with five discrete classes
 maintaining stable and predictable model behavior across validation splits.
 
 
-## Dataset Understanding
+## Data Understanding
 
 Before modeling, the dataset was carefully inspected to ensure that:
 - No missing values or corrupted samples were present
