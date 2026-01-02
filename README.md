@@ -225,6 +225,16 @@ feature vectors (224 features per sample) and returns:
 - the SVM confidence margin (Warning: margin only between p2 and p5 even when predicted class is different)
 - an indicator of assistant model activation
 
+*Example API response:
+
+```json
+{
+  "prediction": 5,
+  "svm_margin": 0.32,
+  "assistant_used": true
+}
+```
+
 *The inference stack includes only the minimal dependencies required for
 serving predictions, ensuring a lightweight and maintainable deployment
 artifact.*
