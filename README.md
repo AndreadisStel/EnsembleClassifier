@@ -93,7 +93,7 @@ noise into high-confidence predictions (Note: XGBoost tends to be overconfident)
 
 The repository is organized as follows to separate training and logging,
 evaluation, and inference concerns:
-
+```
 ensemble-classifier/
 │
 ├── config/
@@ -131,7 +131,7 @@ ensemble-classifier/
 ├── requirements.txt              # Project dependencies
 ├── requirements-inference.txt    # Minimal inference dependencies
 └── README.md
-
+```
 
 ## Training Pipeline
 
