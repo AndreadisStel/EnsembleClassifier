@@ -17,7 +17,22 @@ to correct systematic errors in a known hard classification region
 reproducible evaluation, rather than purely optimizing peak accuracy.*
 
 
-## Problem Overview
+## Table of Contents
+- [Overview](#overview)
+- [Data Understanding](#data-understanding)
+- [Model Architecture](#model-architecture)
+- [Repository Structure](#repository-structure)
+- [Training Pipeline](#training-pipeline)
+- [Evaluation Strategy](#evaluation-strategy)
+- [Stress Testing](#stress-testing)
+- [Experiment Tracking](#experiment-tracking)
+- [Inference & API Design](#inference-&-api-design)
+- [Dockerized Deployment](#dockerized-deployment)
+- [How to Run](#how-to-run)
+- [License](#license)
+
+
+## Overview
 
 The task is a multi-class classification problem with five discrete classes
 (1–5). The primary objective is to achieve high classification accuracy while
@@ -280,3 +295,6 @@ docker run -p 8000:8000 confidence-gated-ensemble
 ```
 This runs the FastAPI inference service in a containerized environment using
 pre-trained models.
+
+
+## License
