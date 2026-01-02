@@ -1,6 +1,6 @@
 # Confidence-Gated Ensemble Classifier
 
-This repository presents a production-oriented machine learning system
+This repository presents a machine learning system
 built around a confidence-gated ensemble architecture.
 
 Originally designed as a Machine Learning course project, the solution
