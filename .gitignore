@@ -8,8 +8,8 @@ __pycache__/
 mlruns/
 mlflow.db
 
-# Ignore artifacts
-artifacts/
+# Ignore inference artifacts
+artifacts/*.csv
 
 # Ignore PyCharm files
 .idea/

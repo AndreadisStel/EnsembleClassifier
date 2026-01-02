@@ -1,0 +1,4 @@
+Mean accuracy: 0.8794
+Std accuracy:  0.0076
+Worst fold:    0.8719
+Best fold:     0.8930
