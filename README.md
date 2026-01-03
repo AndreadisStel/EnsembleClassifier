@@ -34,9 +34,35 @@ reproducible evaluation, rather than purely optimizing peak accuracy.*
 
 ## Overview
 
-The task is a multi-class classification problem with five discrete classes
-(1–5). The primary objective is to achieve high classification accuracy while
+### Original Objective
+
+The goal of the project is to design, evaluate, and deploy a robust multi-class 
+classification system using supervised learning techniques.
+
+The final model will be evaluated on a **hidden test set** by submitting the predicted labels
+as a NumPy array (`.npy`), following competition-style evaluation constraints.
+
+The primary objective is to achieve high classification accuracy while 
 maintaining stable and predictable model behavior across validation splits.
+
+Note: This repository contains a **reproducible public variant of the project**; hidden
+test **labels are intentionally excluded**, but can be easily generated 
+using the existing code.
+
+### Dataset Description
+
+The project uses two tabular datasets with identical feature representations:
+
+- **Training set (`datasetTV.csv`)**  
+  - 8,743 samples  
+  - 224 numerical features  
+  - Fully labeled (classes 1–5)
+
+- **Test set (`datasetTest.csv`)**  
+  - 6,955 samples  
+  - 224 numerical features  
+  - Unlabeled  
+  - Used for final evaluation via label submission
 
 
 ## Data Understanding
