@@ -10,7 +10,7 @@ experiment tracking, **FastAPI** for model serving, and **Docker** for container
 A Support Vector Machine (**SVM**) acts as the primary (**"master"**) classifier,
 while an **XGBoost** model is selectively activated as an **assistant** only in
 low-confidence regions of the SVM decision space. The assistant is designed
-to correct systematic errors in a known hard classification region
+to correct systematic errors in a known **hard classification region**
 (classes 2 vs 5), without degrading overall model stability.
 
 *The project emphasizes on robustness and
